@@ -1,0 +1,109 @@
+2011/09/28 02:01:55, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 02:01:55, 1.2.3.2, loaded default section - continuing
+2011/09/28 02:01:55, 1.2.3.2, processing HTTP headers:
+2011/09/28 02:01:55, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-p2p1 00:11:22:33:44:55:p2p1 -> 00:11:22:33:44:55
+2011/09/28 02:01:55, 1.2.3.2, MAC '00:11:22:33:44:55' found in XML file
+2011/09/28 02:01:55, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server1
+    [6] => 1.2.3.4
+)
+
+2011/09/28 02:01:55, 1.2.3.2, Finished gathering config - outputting kickstart file
+2011/09/28 02:09:57, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 02:09:57, 1.2.3.2, loaded default section - continuing
+2011/09/28 02:09:57, 1.2.3.2, processing HTTP headers:
+2011/09/28 02:09:57, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-p2p1 00:11:22:33:44:55:p2p1 -> 00:11:22:33:44:55
+2011/09/28 02:09:57, 1.2.3.2, MAC '00:11:22:33:44:55' found in XML file
+2011/09/28 02:09:57, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server1
+    [6] => 1.2.3.4
+)
+
+2011/09/28 02:09:57, 1.2.3.2, Finished gathering config - outputting kickstart file
+2011/09/28 02:20:46, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 02:20:46, 1.2.3.2, loaded default section - continuing
+2011/09/28 02:20:46, 1.2.3.2, processing HTTP headers:
+2011/09/28 02:20:46, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-p2p1 00:11:22:33:44:55:p2p1 -> 00:11:22:33:44:55
+2011/09/28 02:20:46, 1.2.3.2, MAC '00:11:22:33:44:55' found in XML file
+2011/09/28 02:20:46, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server1
+    [6] => 1.2.3.4
+)
+
+2011/09/28 02:20:46, 1.2.3.2, Finished gathering config - outputting kickstart file
+2011/09/28 02:27:30, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 02:27:30, 1.2.3.2, loaded default section - continuing
+2011/09/28 02:27:30, 1.2.3.2, processing HTTP headers:
+2011/09/28 02:27:30, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-p2p1 00:11:22:33:44:55:p2p1 -> 00:11:22:33:44:55
+2011/09/28 02:27:30, 1.2.3.2, MAC '00:11:22:33:44:55' found in XML file
+2011/09/28 02:27:30, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server1
+    [6] => 1.2.3.4
+)
+
+2011/09/28 02:27:30, 1.2.3.2, Finished gathering config - outputting kickstart file
+2011/09/28 02:31:57, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 02:31:57, 1.2.3.2, loaded default section - continuing
+2011/09/28 02:31:57, 1.2.3.2, processing HTTP headers:
+2011/09/28 02:31:57, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-p2p1 00:11:22:33:44:55:p2p1 -> 00:11:22:33:44:55
+2011/09/28 02:31:57, 1.2.3.2, MAC '00:11:22:33:44:55' found in XML file
+2011/09/28 02:31:57, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server1
+    [6] => 1.2.3.4
+)
+
+2011/09/28 02:31:57, 1.2.3.2, Finished gathering config - outputting kickstart file
+2011/09/28 03:29:09, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 03:29:09, 1.2.3.2, loaded default section - continuing
+2011/09/28 03:29:09, 1.2.3.2, processing HTTP headers:
+2011/09/28 03:29:09, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_0-em1 55:44:33:22:11:00:em1 -> 55:44:33:22:11:00
+2011/09/28 03:29:09, 1.2.3.2, mac device: HTTP_X_RHN_PROVISIONING_MAC_1-wlan0 99:88:77:66:55:44:wlan0 -> 99:88:77:66:55:44
+2011/09/28 03:29:09, 1.2.3.2, MAC '55:44:33:22:11:00' found in XML file
+2011/09/28 03:29:09, 1.2.3.2, Server details from config:
+Array
+(
+    [0] => 1.2.3.1
+    [1] => fedora15
+    [2] => --permissive
+    [3] => 
+    [4] => sda
+    [5] => server2
+    [6] => 1.2.3.5
+)
+
+2011/09/28 03:29:09, 1.2.3.2, Finished gathering config - outputting kickstart file

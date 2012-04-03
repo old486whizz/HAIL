@@ -1,0 +1,26 @@
+default vesamenu.c32
+#default install
+#prompt 1
+timeout 600
+display boot.msg
+menu background splash.jpg
+
+
+# install from php (default)
+label install
+  menu label install/upgrade system
+  kernel vmlinuz
+  append initrd=initrd.img ip=_MY_IP_ netmask=_MY_NETMASK_ ksdevice=link kssendmac ks=http://_SERVER_IP_/HAIL/home_build.php ethtool="autoneg off speed 100 duplex full"
+
+# RESCUE ME! Take me in your arms, rescue me, I want your tender charms!
+label rescue
+  menu label rescue
+  kernel vmlinuz
+  append initrd=initrd.img rescue
+
+# memtest
+label memtest86
+  menu label memory test
+  kernel memtest
+  append -
+

@@ -1,0 +1,9 @@
+2011/09/28 03:46:57, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 03:46:57, 1.2.3.2, host 'server1' is <active>.
+2011/09/28 03:46:57, 1.2.3.2, File uploaded (name: 'id_rsa.pub' host: 'stacey')
+2011/09/28 03:46:57, 1.2.3.2, placing file into authorized_keys file
+2011/09/28 03:46:57, 1.2.3.2, Unlocking account.
+2011/09/28 03:46:57, 1.2.3.2, waiting for lock request
+2011/09/28 03:46:59, 1.2.3.2, -------------Starting script on request-------------
+2011/09/28 03:46:59, 1.2.3.2, host 'server1' is <active>.
+2011/09/28 03:46:59, 1.2.3.2, lock request has been sent - locking account
