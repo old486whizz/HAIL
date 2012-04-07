@@ -10,7 +10,7 @@ menu background splash.jpg
 label install
   menu label install/upgrade system
   kernel vmlinuz
-  append initrd=initrd.img ip=_MY_IP_ netmask=_MY_NETMASK_ ksdevice=link kssendmac ks=http://_SERVER_IP_/HAIL/home_build.php ethtool="autoneg off speed 100 duplex full"
+  append initrd=initrd.img ip=_MY_IP_ gateway=_MY_GATEWAY_ dns=_MY_DNS_ netmask=_MY_NETMASK_ ksdevice=link kssendmac ks=http://_SERVER_IP_/HAIL/home_build.php ethtool="autoneg off speed 100 duplex full"
 
 # RESCUE ME! Take me in your arms, rescue me, I want your tender charms!
 label rescue

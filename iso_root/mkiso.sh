@@ -22,9 +22,11 @@
 #================================================================
 # Syntax:
 #
-#   ./mkso.sh -m IP -s IP [-n NETMASK] "comment"
+#   ./mkso.sh -m IP -s IP [-n NETMASK] [-g GATEWAY] [-d DNS] "comment"
 #
 #  options:         .
+#    d              DNS server to use during install
+#    g              Gateway server to use during install
 #    m              Temporary IP of server being built
 #    n              Netmask (defaults to 255.255.255.0)
 #    s              IP of build server
@@ -51,15 +53,18 @@ DATESTAMP="`date +%Y%m%d_%H%M%S`"
 VERSION="1.0"
 SCRIPTHOME="./"
 LOGDIR="${SCRIPTHOME}/logs"
-GATEWAY=""
+DNSIP=""
+GATEWAYIP=""
 MYIP=""
 MYNETMASK=""
 SERVERIP=""
 
 usage () {
   echo "V.${VERSION}"
-  echo "usage: ./mkso.sh -m IP -s IP [-n NETMASK] \"comment\"\n"
+  echo "usage: ./mkso.sh -m IP -s IP [-n NETMASK] [-g GATEWAY] [-d DNS] \"comment\"\n"
   echo "options:"
+  echo "  -d            | DNS server to use during install"
+  echo "  -g            | Gateway server to use during install"
   echo "  -m            | Temporary IP of server being built"
   echo "  -n            | Netmask (defaults to 255.255.255.0)"
   echo "  -s            | IP of build server"
@@ -77,11 +82,13 @@ usage () {
 INDEX=1
 
 while [[ ${OPTIND} -le $# ]]; do
-getopts ":m:n:s:" FLAG
+getopts ":m:n:s:d:g:" FLAG
   # first : silences unknown flag errors (handled by '?' instead)
   # : after letter indicates parameter value passed after letter
   case ${FLAG} in
-    g) GATEWAY=${OPTARG}
+    d) DNSIP=${OPTARG}
+      ;;
+    g) GATEWAYIP=${OPTARG}
       ;;
     m) MYIP=${OPTARG}
       ;;
@@ -116,11 +123,24 @@ echo "==============================================="
 printf "== %-10s %30s ==\n" "HOST IP:" "${MYIP}"
 printf "== %-10s %30s ==\n" "NETMASK:" "${MYNETMASK}"
 printf "== %-10s %30s ==\n" "SERVER IP:" "${SERVERIP}"
+printf "== %-10s %30s ==\n" "GATEWAY IP:" "${GATEWAYIP}"
+printf "== %-10s %30s ==\n" "DNS IP:" "${DNSIP}"
 printf "== %-10s %30s\n" "COMMENT:" "'${value[1]}'"
 echo "==============================================="
 
+if [[ -z "${DNSIP}" ]]; then
+  DNSREPL=""
+else
+  DNSREPL="dns=${DNSIP}"
+fi
 
-sed "s/_MY_IP_/${MYIP}/; s/_MY_NETMASK_/${MYNETMASK}/; s/_SERVER_IP_/${SERVERIP}/" isolinux/isolinux.cfg.base >isolinux/isolinux.cfg
+if [[ -z "${GATEWAYIP}" ]]; then
+  GWREPL=""
+else
+  GWREPL="gateway=${GATEWAYIP}"
+fi
+
+sed "s/_MY_IP_/${MYIP}/; s/_MY_NETMASK_/${MYNETMASK}/; s/_SERVER_IP_/${SERVERIP}/; s/gateway=_MY_GATEWAY_/${GWREPL}/g; s/dns=_MY_DNS_/${DNSREPL}/g" isolinux/isolinux.cfg.base >isolinux/isolinux.cfg
 
 mkisofs -m mkiso.sh -m home.iso -o ./home.iso -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -R -T -A "Fedora Custom Install CD" -p "${value[1]}" ./
 [[ "$?" != "0" ]] && echo "** ERROR IN CREATING ISO FILE **"
